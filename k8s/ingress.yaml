@@ -1,0 +1,16 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: express-hello-world
+spec:
+  rules:
+  - host: ec2-18-218-89-156.us-east-2.compute.amazonaws.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: express-hello-world
+            port:
+              number: 80
