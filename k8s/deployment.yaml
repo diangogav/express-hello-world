@@ -18,7 +18,7 @@ spec:
       containers:
       - name: facilitador-web-server
         imagePullPolicy: "Always"
-        image: diangogav/express-hello-world:first
+        image: diangogav/express-hello-world:second
         ports:
         - containerPort: 80
         livenessProbe:
