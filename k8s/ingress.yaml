@@ -5,16 +5,16 @@ metadata:
 spec:
   tls:
   - hosts:
-      - https-example.foo.com
+      - ec2-18-218-89-156.us-east-2.compute.amazonaws.com
     secretName: testsecret-tls
   rules:
-  - host: https-example.foo.com
+  - host: ec2-18-218-89-156.us-east-2.compute.amazonaws.com
     http:
       paths:
       - path: /
         pathType: Prefix
         backend:
           service:
-            name: service1
+            name: express-hello-world
             port:
               number: 3000
