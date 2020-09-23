@@ -1,9 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: express-hello-world
-  labels:
-    app: express-hello-world
+  name: express-deployment
 spec:
   selector:
     matchLabels:
@@ -13,19 +11,9 @@ spec:
     metadata:
       labels:
         app: express-hello-world
-        tier: backend
     spec:
       containers:
-      - name: facilitador-web-server
-        imagePullPolicy: "Always"
-        image: diangogav/express-hello-world:first
+      - name: express-hello-world
+        image: diangogav/express-hello-world:three
         ports:
-        - containerPort: 3000
-        livenessProbe:
-          httpGet:
-            path: /
-            port: 3000
-          initialDelaySeconds: 5
-          timeoutSeconds: 30
-        resources: {}
-      restartPolicy: Always
+        - containerPort: 80

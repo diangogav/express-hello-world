@@ -7,6 +7,6 @@ RUN npm install
 
 ADD . /app
 
-EXPOSE 80
+# EXPOSE 80
 
 CMD ["node", "app"]
