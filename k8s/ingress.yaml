@@ -8,7 +8,6 @@ spec:
     http:
       paths:
       - path: /
-        pathType: Prefix
         backend:
           serviceName: express-service
           servicePort: 80
